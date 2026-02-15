@@ -2,12 +2,12 @@ import random
 
 def jugar_ahorcado():
     # Lista de palabras
-    palabras = ['python', 'programacion', 'ahorcado', 'computadora', 'desarrollo']
+    palabras = ['casa', 'zapato', 'bandera', 'computadora', 'desarrollo']
     palabra_secreta = random.choice(palabras).lower()
     letras_adivinadas = []
     intentos = 6
     
-    print("¡Bienvenido al Ahorcado!")
+    print("¡Bienvenido al Juego el Ahorcado!")
 
     while intentos > 0:
         # Mostrar el estado actual de la palabra
@@ -28,5 +28,4 @@ def jugar_ahorcado():
 
         # Pedir letra
         intento = input("Adivina una letra: ").lower()
-
 
