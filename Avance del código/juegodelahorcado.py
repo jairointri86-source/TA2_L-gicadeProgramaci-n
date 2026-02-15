@@ -29,26 +29,4 @@ def jugar_ahorcado():
         # Pedir letra
         intento = input("Adivina una letra: ").lower()
 
-        # Validación
-        if len(intento) != 1 or not intento.isalpha():
-            print("Por favor, introduce una sola letra válida.")
-            continue
-        if intento in letras_adivinadas:
-            print("Ya has probado esa letra. Intenta con otra.")
-            continue
 
-        letras_adivinadas.append(intento)
-
-        # Comprobar si la letra está en la palabra
-        if intento not in palabra_secreta:
-            intentos -= 1
-            print("Letra incorrecta.")
-        else:
-            print("¡Bien hecho!")
-
-        if intentos == 0:
-            print(f"\n¡Perdiste! La palabra era: {palabra_secreta}")
-
-# Iniciar el juego
-if __name__ == "__main__":
-    jugar_ahorcado()
